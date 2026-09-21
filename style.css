@@ -1,0 +1,101 @@
+:root{
+  --bg:#0d0f13;
+  --panel:#15181e;
+  --panel-2:#1b1f27;
+  --text:#f5f7fa;
+  --muted:#9da5b1;
+  --line:#2a2f38;
+  --accent:#d9ff55;
+  --accent-ink:#10120b;
+  --danger:#ff6e6e;
+  --max:1120px;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 50% -20%,#1b2030 0,#0d0f13 44%);color:var(--text);line-height:1.5}
+button,a{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+.site-header{max-width:var(--max);margin:auto;padding:24px 22px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:900;letter-spacing:.08em;font-size:15px}
+.brand span{color:var(--accent)}
+.site-header nav{display:flex;gap:24px;color:var(--muted);font-size:14px}
+.site-header nav a:hover{color:var(--text)}
+main{max-width:var(--max);margin:auto;padding:24px 22px 80px}
+.hero{padding:70px 0 40px;text-align:center}
+.eyebrow{font-size:11px;letter-spacing:.18em;color:var(--muted);font-weight:800;margin:0 0 12px}
+h1{font-size:clamp(54px,10vw,110px);line-height:.95;letter-spacing:-.06em;margin:0}
+.hero-copy{max-width:640px;margin:24px auto 34px;color:#c7ccd4;font-size:17px}
+.challenge-shell{max-width:760px;margin:auto;text-align:left;background:rgba(21,24,30,.86);border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:0 25px 80px rgba(0,0,0,.3)}
+.challenge-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:26px}
+.question{font-size:clamp(28px,5vw,48px);line-height:1.05;letter-spacing:-.03em;margin:0 0 24px}
+.answers{display:grid;gap:10px}
+.answer-btn{width:100%;text-align:left;padding:18px 18px;border-radius:16px;border:1px solid var(--line);background:var(--panel-2);color:var(--text);transition:.18s transform,.18s border-color,.18s background}
+.answer-btn:hover{transform:translateY(-1px);border-color:#4a5260}
+.answer-btn.selected{border-color:var(--accent);background:#202518}
+.answer-main{display:block;font-size:16px;font-weight:700}
+.answer-sub{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+.predict-box{margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
+.predict-head{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.predict-title{font-size:15px;font-weight:800}
+.big-percent{font-size:48px;line-height:1;font-weight:900;letter-spacing:-.04em}
+.range-wrap{margin:20px 0}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.range-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.primary-btn,.secondary-btn{border-radius:13px;padding:13px 16px;border:1px solid transparent;font-weight:800}
+.primary-btn{background:var(--accent);color:var(--accent-ink)}
+.primary-btn:disabled{opacity:.45;cursor:not-allowed}
+.secondary-btn{background:transparent;border-color:var(--line);color:var(--text)}
+.action-row{display:flex;gap:10px;margin-top:18px}
+.result{margin-top:24px;display:none}
+.result.visible{display:block}
+.result-top{display:flex;justify-content:space-between;gap:16px;align-items:start}
+.score{font-size:72px;line-height:.9;letter-spacing:-.06em;font-weight:950}
+.score small{display:block;font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:800;margin-top:8px}
+.result-copy{color:#cbd0d8;margin:8px 0 0}
+.result-line{margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.result-metric{background:var(--panel-2);border:1px solid var(--line);border-radius:15px;padding:14px}
+.result-metric span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.result-metric strong{display:block;margin-top:3px;font-size:20px}
+.section-head{margin-bottom:24px}
+.section-head h2{font-size:clamp(28px,5vw,48px);line-height:1;letter-spacing:-.04em;margin:0}
+.stats-section,.how-section{padding:80px 0 0}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}
+.stat-label{display:block;color:var(--muted);font-size:12px}
+.stat-card strong{display:block;font-size:36px;letter-spacing:-.05em;margin-top:10px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.steps article{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+.steps span{display:block;color:var(--accent);font-weight:900;letter-spacing:.1em;font-size:12px}
+.steps h3{font-size:24px;margin:26px 0 6px}
+.steps p{color:var(--muted);margin:0}
+.note{max-width:760px;color:var(--muted);font-size:12px;margin:20px 0 0}
+.site-footer{max-width:var(--max);margin:auto;padding:20px 22px 35px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+.dialog[hidden]{display:none}
+.dialog{position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:20px}
+.dialog-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
+.dialog-card{position:relative;width:min(520px,100%);background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:24px;z-index:1}
+.close-btn{position:absolute;right:14px;top:10px;background:none;border:0;color:var(--muted);font-size:28px}
+.share-card{margin:20px 0;background:linear-gradient(145deg,#171a20,#0f1115);border:1px solid #343a45;border-radius:20px;padding:28px}
+.share-brand{font-size:12px;letter-spacing:.16em;font-weight:900;color:var(--accent)}
+.share-score{font-size:72px;font-weight:950;letter-spacing:-.07em;line-height:1;margin:30px 0 8px}
+.share-details{color:#c4cad3}
+.share-details strong{color:var(--text)}
+.dialog-actions{display:flex;gap:10px}
+.dialog-actions button{flex:1}
+@media (max-width:800px){
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .site-header{padding:18px}
+  .site-header nav{gap:14px}
+  main{padding-left:16px;padding-right:16px}
+  .hero{padding-top:45px}
+  .challenge-shell{padding:18px;border-radius:22px}
+  .result-top{flex-direction:column}
+  .result-line{grid-template-columns:1fr 1fr}
+  .site-footer{padding-left:16px;padding-right:16px}
+}

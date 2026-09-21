@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101217">
+  <meta name="description" content="One More — a daily 10-second crowd prediction game.">
+  <meta property="og:title" content="One More — Predict the crowd.">
+  <meta property="og:description" content="Make one choice. Predict the crowd. See how close you were.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <title>One More — Predict the crowd.</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="One More home">ONE MORE<span>.</span></a>
+    <nav aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#stats">Stats</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">DAILY 10-SECOND CHALLENGE</p>
+      <h1 id="hero-title">Predict the crowd.</h1>
+      <p class="hero-copy">Make one choice. Then guess what percentage of people would choose the same thing.</p>
+      <div class="challenge-shell">
+        <div class="challenge-meta">
+          <span id="dateLabel">Today</span>
+          <span id="questionCount">Question 1</span>
+        </div>
+        <div id="game" class="game" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="stats" class="stats-section" aria-labelledby="stats-title">
+      <div class="section-head">
+        <p class="eyebrow">YOUR RECORD</p>
+        <h2 id="stats-title">Small guesses. Better instincts.</h2>
+      </div>
+      <div class="stat-grid">
+        <article class="stat-card"><span class="stat-label">Played</span><strong id="playedStat">0</strong></article>
+        <article class="stat-card"><span class="stat-label">Average score</span><strong id="avgStat">—</strong></article>
+        <article class="stat-card"><span class="stat-label">Best score</span><strong id="bestStat">—</strong></article>
+        <article class="stat-card"><span class="stat-label">Streak</span><strong id="streakStat">0</strong></article>
+      </div>
+    </section>
+
+    <section id="how" class="how-section" aria-labelledby="how-title">
+      <div class="section-head">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2 id="how-title">Three moves.</h2>
+      </div>
+      <div class="steps">
+        <article><span>01</span><h3>Choose</h3><p>Pick the option you think most people would choose.</p></article>
+        <article><span>02</span><h3>Predict</h3><p>Set the percentage you think will match that choice.</p></article>
+        <article><span>03</span><h3>Reveal</h3><p>See the benchmark, your error, and your score.</p></article>
+      </div>
+      <p class="note">One More is a fixed-content game: crowd percentages are curated benchmark results, not live polling.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>ONE MORE.</span>
+    <span>Built for the next guess.</span>
+  </footer>
+
+  <div id="shareDialog" class="dialog" hidden>
+    <div class="dialog-backdrop" data-close-dialog></div>
+    <section class="dialog-card" role="dialog" aria-modal="true" aria-labelledby="shareTitle">
+      <button class="close-btn" type="button" aria-label="Close" data-close-dialog>×</button>
+      <p class="eyebrow">YOUR RESULT</p>
+      <h2 id="shareTitle">Share the guess.</h2>
+      <div id="shareCard" class="share-card"></div>
+      <div class="dialog-actions">
+        <button class="primary-btn" id="shareBtn">Share result</button>
+        <button class="secondary-btn" id="copyBtn">Copy link</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
